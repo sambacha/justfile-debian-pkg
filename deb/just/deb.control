@@ -1,0 +1,25 @@
+Source: {{.Name}}
+Section: science
+Priority: extra
+Maintainer: {{.Author}}
+Build-Depends: debhelper (>= 8.0.0), {{.GoBootPackage}}
+Standards-Version: 3.9.5
+Homepage: https://github.com/casey/just
+Vcs-Git: https://github.com/casey/just.git
+Vcs-Browser: https://github.com/casey/just
+
+Package: {{.Name}}
+Architecture: any
+Depends: ${misc:Depends}, {{.ExeList}}
+Description: Just a command runner
+ just, is for all the other miscellaneous commands you might run as part of development.
+
+{{range .Executables}}
+Package: {{$.ExeName .}}
+Conflicts: {{$.ExeConflicts .}}
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: {{.Description}}
+ {{.Description}}
+{{end}}

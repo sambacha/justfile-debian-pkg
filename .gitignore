@@ -1,0 +1,25 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/**/build
+.DS_Store
+/dist
+/build
+
+## Binary ##
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+## IDE ##
+.secret
+.idea/*
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace

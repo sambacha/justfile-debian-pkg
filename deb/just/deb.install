@@ -1,0 +1,5 @@
+target/x86_64-unknown-linux-gnu/release/{{.BinaryName}} usr/bin
+{{- if eq .BinaryName "just" }}
+target/x86_64-unknown-linux-gnu/release/just.d etc/bash_completion.d
+target/x86_64-unknown-linux-gnu/release/just.d usr/share/zsh/vendor-completions
+{{end -}}

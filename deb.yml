@@ -1,0 +1,13 @@
+inputs:
+  package:
+    description: 'Justfile.'
+    required: true
+  package_root:
+    description: 'target/x86_64-unknown-linux-gnu/release'
+    required: true
+  maintainer:
+    description: 'Casey'
+    required: true
+  version:
+    description: '1.3.0.'
+    required: true
